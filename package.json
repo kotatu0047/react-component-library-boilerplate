@@ -96,5 +96,10 @@
   },
   "dependencies": {
     "core-js": "^2.6.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
   }
 }
