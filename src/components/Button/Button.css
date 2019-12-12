@@ -1,0 +1,34 @@
+.button {
+  transition: all 200ms ease-in;
+  /*box-shadow: none;*/
+}
+
+.button:not(:disabled) {
+  cursor: pointer;
+}
+
+.button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .5);
+}
+
+.primaryColors {
+  background: #5cdb95;
+  color: #05385b;
+}
+
+.primaryColors:hover {
+  background: #ffffff;
+  color: #5cdb95;
+}
+
+.shape {
+  border: 1px solid rgb(0, 123, 255);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.font {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
