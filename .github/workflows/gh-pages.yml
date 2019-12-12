@@ -1,0 +1,32 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  doc-build:
+    name: build react-styleguidist
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: run docs:Build
+        run: |
+          npm ci
+          npm run docs:build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.4.0
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./dist-docs
