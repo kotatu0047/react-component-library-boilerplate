@@ -83,7 +83,7 @@
     "react-dom": "^16.12.0",
     "react-styleguidist": "9.1.13",
     "rimraf": "^3.0.0",
-    "rollup": "^1.27.9",
+    "rollup": "^2.79.2",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-license": "^0.13.0",
